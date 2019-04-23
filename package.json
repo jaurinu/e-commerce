@@ -1,0 +1,27 @@
+{
+  "name": "e-commerce",
+  "version": "1.0.0",
+  "description": "pottery shop",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndreaMyshkn/e-commerce.git"
+  },
+  "keywords": [
+    "pottery",
+    "e-commerce",
+    "shop"
+  ],
+  "author": "las niñas pobres",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AndreaMyshkn/e-commerce/issues"
+  },
+  "homepage": "https://github.com/AndreaMyshkn/e-commerce#readme"
+}
