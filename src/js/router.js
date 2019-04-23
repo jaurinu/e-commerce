@@ -1,6 +1,8 @@
 
 window.library.getId("view").routing()
-    .route('/', 'src/views/home.html', 'myController', null, null
+    .route('/', 'src/views/home.html', 'myController', function (){
+        library.getCtrl().functionsHome()
+    }
     )
     .route('/about-me', 'src/views/about-me.html', 'myController', null, null
     )
