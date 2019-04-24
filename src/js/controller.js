@@ -54,7 +54,6 @@ library.controller('myController', {
 
   functionsHome: () => {
 
-
     const printTotalAccesories = document.getElementById('printTotalAccesories');
 
 
