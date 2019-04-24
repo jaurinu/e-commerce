@@ -10,11 +10,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <title>E-commerce</title>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+
 </head>
 
 <body>
     <header>
-        <nav>
+        <nav class="teal lighten-4">
             <div class="nav-wrapper">
                 <a href="#/" class="brand-logo">Pata hueca</a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
@@ -22,6 +24,7 @@
                     <li><a href="#/shopping"><img  class="car" src="src/assets/shopping-cart.svg" alt=""></a></li>
                     <li><a href="#/login">Registro</a></li>
                    <li><a href="#/contact">Contacto</a></li>
+                   <li><a class="hide" id="buttonSignOut" href="" onclick="logOut()">Cerrar Sesión</a></li>
                 </ul>
             </div>
         </nav>
@@ -45,7 +48,7 @@
 
 
     </main>
-    <footer class="page-footer">
+    <footer class="page-footer teal lighten-4">
             <div class="container">
               <div class="row">
                 <div class="col l6 s12">
@@ -71,12 +74,14 @@
             </div>
           </footer>
 
+    <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    <script src="./js/firebase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/library.js"></script>
-    <script src="./js/firebase.js"></script>
     <script src="./js/controller.js"></script>
     <script src="./js/router.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
 </body>
 
