@@ -1,4 +1,5 @@
-{  "catalogo" : [{"complementos": [
+{  "catalogo" : [{
+  "complementos": [
     {
      "name": "Set de jícaras blancas diferentes tamaños",
      "img": "https://lagunablanca.mx/wp-content/uploads/2019/04/XI-038-350x434.jpg",
@@ -350,5 +351,5 @@
 }]
 
 
-    
+
     }
