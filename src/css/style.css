@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,500,700');
-
+*{
+    font-family: 'Roboto', sans-serif;
+}
 .car{
     width: 28px;
     height: 28px;
+    margin-top: 5px;
 }

@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/AndreaMyshkn/e-commerce/issues"
   },
-  "homepage": "https://github.com/AndreaMyshkn/e-commerce#readme"
+  "homepage": "https://github.com/AndreaMyshkn/e-commerce#readme",
+  "dependencies": {
+    "firebaseui": "^3.6.0"
+  }
 }
