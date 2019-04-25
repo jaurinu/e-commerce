@@ -2,14 +2,14 @@ library.controller('myController', {
 
   login: () => {
 
-    (function () {
+    (function() {
       var ui = new firebaseui.auth.AuthUI(firebase.auth());
       var uiConfig = {
         callbacks: {
-          signInSuccessWithAuthResult: function (authResult, redirectUrl) {
+          signInSuccessWithAuthResult: function(authResult, redirectUrl) {
             return true;
           },
-          uiShown: function () {
+          uiShown: function() {
             document.getElementById('loader').style.display = 'none';
           }
         },
@@ -24,12 +24,12 @@ library.controller('myController', {
       ui.start('#firebaseui-auth-container', uiConfig);
     })();
 
-    (function () {
+    (function() {
 
       const hideSignOut = document.getElementById('buttonSignOut');
       const buttonLogin = document.getElementById('buttonLogin');
       var uid = null;
-      firebase.auth().onAuthStateChanged(function (user) {
+      firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
           console.log(' User is signed in')
           hideSignOut.classList.remove('hide')
@@ -96,7 +96,7 @@ library.controller('myController', {
      </div>
   <div class="card-reveal">
     <span class="card-title grey-text text-darken-4"><h5>${name}</h5><i class="material-icons right">close</i></span>
-    <p class="description-size blue-grey-text text-lighten-2">${description}</p> 
+    <p class="description-size blue-grey-text text-lighten-2">${description}</p>
   </div>
 </div>
   </div>
@@ -105,14 +105,6 @@ library.controller('myController', {
       printTotalAccesories.insertAdjacentHTML("beforeend", result);
     }
 
-
-
-          
-
-
-
-
-
     totalAccesories.forEach(element => {
       let img = element.img;
       let name = element.name;
@@ -120,7 +112,7 @@ library.controller('myController', {
       let description = element.description;
       let sku = element.sku;
       printData(img, name, price, description, sku)
-    })
+    }),
 
     totalMezcaleros.forEach(element => {
       let img = element.img;
@@ -129,7 +121,7 @@ library.controller('myController', {
       let description = element.description;
       let sku = element.sku;
       printData(img, name, price, description, sku)
-    })
+    }),
 
     totalGlasses.forEach(element => {
       let img = element.img;
@@ -138,22 +130,19 @@ library.controller('myController', {
       let description = element.description;
       let sku = element.sku;
       printData(img, name, price, description, sku)
-    })
+    });
+  }
 
-  },
+  // printCart: () => {
+  //   const cart = document.getElementById('car');
+  //   let resultCart = `
+  //   <ul class="collection">
+  //     <li class="collection-item">Cuenco con mortero de madera<br>$242.71</li>
+  //   </ul>
+  //   <a href="#/shop" class="button empty-cart-btn">Seguir Comprando</a> <br>
+  // `;
+  //
+  //   cart.insertAdjacentHTML("beforeend", resultCart);
+  // },
 
-  printCart: () => {
-    const cart = document.getElementById('car');
-    let resultCart = `  
-    <ul class="collection">
-      <li class="collection-item">Cuenco con mortero de madera<br>$242.71</li>
-    </ul>
-    <a href="#/shop" class="button empty-cart-btn">Seguir Comprando</a> <br>
-  `;
-
-    cart.insertAdjacentHTML("beforeend", resultCart);
-  },
-
-
-
-})
+});
