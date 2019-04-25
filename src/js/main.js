@@ -19,7 +19,6 @@ let dropdownShop =
   })()
 
 $(".dropdown-trigger").dropdown();
- 
 
 
 
