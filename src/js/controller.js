@@ -53,7 +53,8 @@ library.controller('myController', {
   },
 
   functionsHome: () => {
-
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems);
     const printTotalAccesories = document.getElementById('printTotalAccesories');
 
 

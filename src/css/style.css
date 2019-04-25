@@ -2,6 +2,11 @@
 *{
     font-family: 'Roboto', sans-serif;
 }
+nav.nav{
+    height: 100px;
+    line-height: 100px;
+    padding: 0 50px;
+}
 .car{
     width: 30px;
     height: 30px;
@@ -13,6 +18,7 @@
 }
 .title-nav:hover{
     color: #90a4ae;
+    background-color: #fff;
 }
 .brand-logo .img-logo{
     width: 100px;
