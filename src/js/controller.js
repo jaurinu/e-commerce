@@ -48,14 +48,12 @@ library.controller('myController', {
   },
 
   functionsHome: () => {
-    var instance = M.Carousel.init({
+   
+    $('.carousel.carousel-slider').carousel({
       fullWidth: true,
       indicators: true
     });
-
     const printTotalAccesories = document.getElementById('printTotalAccesories');
-
-
     const url = 'https://e-commerce-29db7.firebaseio.com/catalogo.json';
     console.log(url)
     fetch(url)
