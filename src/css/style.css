@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,500,700');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
 *{
     font-family: 'Roboto', sans-serif;
 }
@@ -145,3 +147,41 @@ h5  {
      width: 500px;
  }
 
+ .taller{
+    color: #26a69a;
+    font-weight: bold;
+}
+.textabout{
+    
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 1rem;
+    text-align: justify
+}
+.size{
+    width: 400px;
+}
+.margin-about{
+    margin: 20px;
+}
+.title-designers{
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 35px;
+    color: #26a69a;
+    font-weight: bold;
+}
+.designer-name{
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 20px;
+    color: #26a69a;
+    font-weight: bold;
+    text-align: center;
+}
+.photo-designer{
+    margin: 20px 20px 0 20px;
+  align-items: center
+    }
+.designers{
+    margin: 5px;
+    display: inline-block;
+   
+}
