@@ -1,50 +1,50 @@
 library.controller('myController', {
 
-  login:()=>{
+  login: () => {
 
     (function () {
-    var ui = new firebaseui.auth.AuthUI(firebase.auth());
-    var uiConfig = {
-      callbacks: {
-        signInSuccessWithAuthResult: function(authResult, redirectUrl) {
-          return true;
+      var ui = new firebaseui.auth.AuthUI(firebase.auth());
+      var uiConfig = {
+        callbacks: {
+          signInSuccessWithAuthResult: function (authResult, redirectUrl) {
+            return true;
+          },
+          uiShown: function () {
+            document.getElementById('loader').style.display = 'none';
+          }
         },
-        uiShown: function() {
-          document.getElementById('loader').style.display = 'none';
+        signInFlow: 'popup',
+        signInSuccessUrl: 'index.html#/',
+        signInOptions: [
+          firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+          firebase.auth.EmailAuthProvider.PROVIDER_ID,
+        ],
+        tosUrl: 'index.html#/',
+      };
+      ui.start('#firebaseui-auth-container', uiConfig);
+    })();
+
+    (function () {
+
+      const hideSignOut = document.getElementById('buttonSignOut');
+      const buttonLogin = document.getElementById('buttonLogin');
+      var uid = null;
+      firebase.auth().onAuthStateChanged(function (user) {
+        if (user) {
+          console.log(' User is signed in')
+          hideSignOut.classList.remove('hide')
+          buttonLogin.classList.add('hide');
+        } else {
+          //redirect to login page
+          uid = null;
+          console.log('no estás logueado')
         }
-      },
-      signInFlow: 'popup',
-      signInSuccessUrl: 'index.html#/',
-      signInOptions: [
-        firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-        firebase.auth.EmailAuthProvider.PROVIDER_ID,
-      ],
-      tosUrl: 'index.html#/',
-    };
-    ui.start('#firebaseui-auth-container', uiConfig);
-  })();
+      });
 
-  (function(){
 
-        const hideSignOut = document.getElementById('buttonSignOut');
-        const buttonLogin = document.getElementById('buttonLogin');
-        var uid = null;
-        firebase.auth().onAuthStateChanged(function(user) {
-            if (user) {
-                console.log(' User is signed in')
-                hideSignOut.classList.remove('hide')
-                buttonLogin.classList.add('hide');
-            } else{
-                //redirect to login page
-                uid= null;
-               console.log('no estás logueado')
-            }
-          });
-    
-    
-        
-    }) ();
-    
+
+    })();
+
   },
 
   functionsHome: () => {
@@ -104,7 +104,8 @@ library.controller('myController', {
 
   
   </div>
-</div>`;
+</div>
+`;
       printTotalAccesories.insertAdjacentHTML("beforeend", result);
     }
 
@@ -121,7 +122,8 @@ library.controller('myController', {
       let name = element.name;
       let price = element.price;
       let description = element.description;
-      printData(img, name, price, description)
+      let sku = element.sku;
+      printData(img, name, price, description, sku)
     })
 
     totalMezcaleros.forEach(element => {
@@ -129,7 +131,8 @@ library.controller('myController', {
       let name = element.name;
       let price = element.price;
       let description = element.description;
-      printData(img, name, price, description)
+      let sku = element.sku;
+      printData(img, name, price, description, sku)
     })
 
     totalGlasses.forEach(element => {
@@ -137,12 +140,23 @@ library.controller('myController', {
       let name = element.name;
       let price = element.price;
       let description = element.description;
-      printData(img, name, price, description)
+      let sku = element.sku;
+      printData(img, name, price, description, sku)
     })
 
+  },
 
-  }
+  printCart: () => {
+    const cart = document.getElementById('car');
+    let resultCart = `  
+    <ul class="collection">
+      <li class="collection-item">Cuenco con mortero de madera<br>$242.71</li>
+    </ul>
+    <a href="#/shop" class="button empty-cart-btn">Seguir Comprando</a> <br>
+  `;
 
+    cart.insertAdjacentHTML("beforeend", resultCart);
+  },
 
 
 
