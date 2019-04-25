@@ -1,50 +1,50 @@
 library.controller('myController', {
 
-  login:()=>{
+  login: () => {
 
     (function () {
-    var ui = new firebaseui.auth.AuthUI(firebase.auth());
-    var uiConfig = {
-      callbacks: {
-        signInSuccessWithAuthResult: function(authResult, redirectUrl) {
-          return true;
+      var ui = new firebaseui.auth.AuthUI(firebase.auth());
+      var uiConfig = {
+        callbacks: {
+          signInSuccessWithAuthResult: function (authResult, redirectUrl) {
+            return true;
+          },
+          uiShown: function () {
+            document.getElementById('loader').style.display = 'none';
+          }
         },
-        uiShown: function() {
-          document.getElementById('loader').style.display = 'none';
+        signInFlow: 'popup',
+        signInSuccessUrl: 'index.html#/',
+        signInOptions: [
+          firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+          firebase.auth.EmailAuthProvider.PROVIDER_ID,
+        ],
+        tosUrl: 'index.html#/',
+      };
+      ui.start('#firebaseui-auth-container', uiConfig);
+    })();
+
+    (function () {
+
+      const hideSignOut = document.getElementById('buttonSignOut');
+      const buttonLogin = document.getElementById('buttonLogin');
+      var uid = null;
+      firebase.auth().onAuthStateChanged(function (user) {
+        if (user) {
+          console.log(' User is signed in')
+          hideSignOut.classList.remove('hide')
+          buttonLogin.classList.add('hide');
+        } else {
+          //redirect to login page
+          uid = null;
+          console.log('no estás logueado')
         }
-      },
-      signInFlow: 'popup',
-      signInSuccessUrl: 'index.html#/',
-      signInOptions: [
-        firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-        firebase.auth.EmailAuthProvider.PROVIDER_ID,
-      ],
-      tosUrl: 'index.html#/',
-    };
-    ui.start('#firebaseui-auth-container', uiConfig);
-  })();
+      });
 
-  (function(){
 
-        const hideSignOut = document.getElementById('buttonSignOut');
-        const buttonLogin = document.getElementById('buttonLogin');
-        var uid = null;
-        firebase.auth().onAuthStateChanged(function(user) {
-            if (user) {
-                console.log(' User is signed in')
-                hideSignOut.classList.remove('hide')
-                buttonLogin.classList.add('hide');
-            } else{
-                //redirect to login page
-                uid= null;
-               console.log('no estás logueado')
-            }
-          });
-    
-    
-        
-    }) ();
-    
+
+    })();
+
   },
 
   functionsHome: () => {
@@ -77,32 +77,49 @@ library.controller('myController', {
 
 
     const printData = (img, name, price, description) => {
-      let result = `  <div class="row">
-  <div class="col s4 m4 l4">
-    <div class="card">
-      <div class="card-image">
-        <img src="${img}">
-        <span class="card-title black-text" >${name}</span>
-      </div>
-      <div class="card-content">
-         <h4 > ${price}</h4>
-        <p class="black-text">${description}</p>
-      </div>
-      <div class="card-action">
-      <a class="waves-effect waves-light white btn"><img class="car" src="../src/assets/shopping-cart.svg"></a> 
-      </div>
-    </div>
+      let more = 'Ver más'
+      let result = `
+      <div class="row">
+  <div class="col s4 m4 l4 offset-l3">
+  <div class=" card">
+  <div class="card-image waves-effect waves-block waves-light">
+    <img class="activator" src="${img}">
   </div>
-</div>`;
+  <div class="card-content">
+    <span class="card-title teal-text text-l.. ighten-1"><h5>${name} </h5></span>
+      <p class="col l2 offset-l10" ><i class="far fa-heart heart-size"></i></p>
+      <div class="row">
+      <h5 class="blue-grey-text text-lighten-2 col l6"> ${price}</h5>
+      <a class="waves-effect waves-light col l6 offset-l1 "><i class="fas fa-shopping-bag shop-bag "></i></a>
+      </div>
+      <a  class=" activator blue-grey-text text-lighten-2 transparent col l7 offset-l4">${more}</a>
+     </div>
+  <div class="card-reveal">
+    <span class="card-title grey-text text-darken-4"><h5>${name}</h5><i class="material-icons right">close</i></span>
+    <p class="description-size blue-grey-text text-lighten-2">${description}</p> 
+  </div>
+</div>
+  </div>
+</div>
+`;
       printTotalAccesories.insertAdjacentHTML("beforeend", result);
     }
+
+
+
+          
+
+
+
+
 
     totalAccesories.forEach(element => {
       let img = element.img;
       let name = element.name;
       let price = element.price;
       let description = element.description;
-      printData(img, name, price, description)
+      let sku = element.sku;
+      printData(img, name, price, description, sku)
     })
 
     totalMezcaleros.forEach(element => {
@@ -110,7 +127,8 @@ library.controller('myController', {
       let name = element.name;
       let price = element.price;
       let description = element.description;
-      printData(img, name, price, description)
+      let sku = element.sku;
+      printData(img, name, price, description, sku)
     })
 
     totalGlasses.forEach(element => {
@@ -118,12 +136,23 @@ library.controller('myController', {
       let name = element.name;
       let price = element.price;
       let description = element.description;
-      printData(img, name, price, description)
+      let sku = element.sku;
+      printData(img, name, price, description, sku)
     })
 
+  },
 
-  }
+  printCart: () => {
+    const cart = document.getElementById('car');
+    let resultCart = `  
+    <ul class="collection">
+      <li class="collection-item">Cuenco con mortero de madera<br>$242.71</li>
+    </ul>
+    <a href="#/shop" class="button empty-cart-btn">Seguir Comprando</a> <br>
+  `;
 
+    cart.insertAdjacentHTML("beforeend", resultCart);
+  },
 
 
 

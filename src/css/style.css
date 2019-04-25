@@ -23,11 +23,68 @@ nav.nav{
 .brand-logo .img-logo{
     width: 100px;
     height: 100px;
-}
-ul .footer-title,
+ }
+ ul .footer-title,
 h5  {
-    color: #26a69a;
+   color: #26a69a;
 }
 .social{
-    width: 30px;
+   width: 30px;
 }
+
+
+ /* styles Andrea */
+
+ .font-shop{
+     font-size: 1.1em;
+
+ }
+ .textarea-search{
+    position: relative;
+    width: 80%;
+   right:10%;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color:#eeeeee;
+    border-radius: 5px;
+    font-size: 17px;
+    color: orangered;
+    resize: vertical;
+    font-family: 'Open Sans', sans-serif !important;
+    max-height: 400px;
+    min-height: 45px;
+    margin-bottom: 5px;
+ }
+
+ .button-search{
+     width:60%;
+ }
+ .title-search{
+     position: relative;
+     right:7%;
+ }
+
+ .size-view{
+    min-height: 100vh !important;
+ }
+
+ .shop-bag{
+ 
+     font-size: 30px;
+     color:#ffb74d;
+ }
+
+ .heart-size{
+     font-size: 25px;
+     color:  #424242;
+ }
+
+ .description-size{
+     font-size: 22px;
+ }
+
+ .tarjetitas{
+     display: inline-block;
+ }
