@@ -33,6 +33,7 @@ h5  {
 }
 
 
+
  /* styles Andrea */
 
  .font-shop{
@@ -50,7 +51,7 @@ h5  {
     background-color:#eeeeee;
     border-radius: 5px;
     font-size: 17px;
-    color: orangered;
+    color: #ffb74d;
     resize: vertical;
     font-family: 'Open Sans', sans-serif !important;
     max-height: 400px;
@@ -87,4 +88,8 @@ h5  {
 
  .tarjetitas{
      display: inline-block;
+ }
+ .footer-margin{
+    border-style: solid;
+    border-top-color:#e0e0e0;
  }
