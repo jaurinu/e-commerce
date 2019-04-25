@@ -86,7 +86,7 @@ library.controller('myController', {
     <img class="activator" src="${img}">
   </div>
   <div class="card-content">
-    <span class="card-title teal-text text-lighten-1"><h5>${name} </h5></span>
+    <span class="card-title teal-text text-l.. ighten-1"><h5>${name} </h5></span>
       <p class="col l2 offset-l10" ><i class="far fa-heart heart-size"></i></p>
       <div class="row">
       <h5 class="blue-grey-text text-lighten-2 col l6"> ${price}</h5>
