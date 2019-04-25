@@ -24,3 +24,10 @@ nav.nav{
     width: 100px;
     height: 100px;
 }
+ul .footer-title,
+h5  {
+    color: #26a69a;
+}
+.social{
+    width: 30px;
+}

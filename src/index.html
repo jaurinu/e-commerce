@@ -17,12 +17,14 @@
         <nav class="nav white">
             <div class="nav-wrapper">
                 <div class="row">
-                  <a href="#/" class="brand-logo col l2 m2"><img class="img-logo" src="assets/logopatahueca.jpg" alt=""></a>
+                  <a href="#/" class="brand-logo col l2 m2"><img class="img-logo" src=".\assets\logopatahueca.jpg" alt=""></a>
                   <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a class="title-nav" href="#/about-me">Sobre mí</a></li>
-                    <li><a class="title-nav" href="#/login">Registro</a></li>
-                    <li><a class="title-nav" href="#/contact">Contacto</a></li>
+                      <li><a class="title-nav" href="#/">Inicio</a></li>
+                    <li><a class="title-nav" href="#/about-me">Sobre nosotros</a></li>
+                    <li><a class="title-nav" href="#/shop">Tienda</a></li>
                     <li><a class="title-nav" href="#/shopping"><i class="fas fa-shopping-bag"></i></a></li>
+                    <li><a id="buttonLogin" class="title-nav" href="#/login">Registro</a></li>
+                    <!-- <li><a class="title-nav" href="#/contact">Contacto</a></li> -->
                     <li><a class="title-nav hide" id="buttonSignOut" href="" onclick="logOut()">Cerrar Sesión</a></li>
                   </ul>
                 </div>
@@ -38,31 +40,31 @@
             </div>
         </div>
     </main>
-    <footer class="page-footer teal lighten-4">
+    <footer class="page-footer white">
             <div class="container">
               <div class="row">
-                <div class="col l6 s12">
-                  <h5 class="white-text">Footer Content</h5>
-                  <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+                <div class="col l4 m4">
+                  <h5 class="footer-contact">Contacto</h5>
+                  <a href="#/" class="brand-logo"><img class="img-logo center-align" src=".\assets\logopatahueca.jpg" alt=""></a>   
                 </div>
-                <div class="col l4 offset-l2 s12">
-                  <h5 class="white-text">Links</h5>
+                <div class="col l4 m4">
                   <ul>
-                    <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                  <li><a class="footer-title " href="#!"><img class="social" src="assets/correo.svg" alt=""> info@pataheca.com</a></li>
+                  <li><a class="footer-title " href="#!"><img class="social" src="assets/facebook.svg" alt=""> Taller Pata Hueca</a></li>
+                  <li><a class="footer-title " href="#!"><img class="social" src="assets/twitter.svg" alt=""> Taller Pata Hueca</a></li>
+                  </ul>
+                </div>
+                <div class="col l4 m4">
+                  <ul>
+                    <li><a class="footer-title" href="#!">Aviso de privacidad</a></li>
+                    <li><a class="footer-title " href="#!">Preguntas frecuentes</a></li>
+                    <li><a class="footer-title " href="#!">Términos y condiciones</a></li>
+                    <li><a class="footer-title " href="#!">Rastrear pedido</a></li>
                   </ul>
                 </div>
               </div>
-            </div>
-            <div class="footer-copyright">
-              <div class="container">
-              © 2014 Copyright Text
-              <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-              </div>
-            </div>
-          </footer>
+            </div>  
+      </footer>
     <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script> 
     <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
     <script src="./js/firebase.js"></script>
