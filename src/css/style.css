@@ -3,7 +3,18 @@
     font-family: 'Roboto', sans-serif;
 }
 .car{
-    width: 28px;
-    height: 28px;
+    width: 30px;
+    height: 30px;
     margin-top: 5px;
+}
+.title-nav{
+    color: #26a69a;
+    font-size: 1.2em;
+}
+.title-nav:hover{
+    color: #90a4ae;
+}
+.brand-logo .img-logo{
+    width: 100px;
+    height: 100px;
 }

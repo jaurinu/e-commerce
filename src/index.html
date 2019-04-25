@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -15,19 +14,19 @@
 </head>
 <body>
     <header>
-        <nav class="teal lighten-4">
+        <nav class="white">
             <div class="nav-wrapper">
-                <a href="#/" class="brand-logo">Pata hueca</a>
+                <a href="#/" class="brand-logo"><img class="img-logo" src="assets/logopatahueca.jpg" alt=""></a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="#/about-me">Sobre mí</a></li>
-                    <li><a href="#/shopping"><img  class="car" src="src/assets/shopping-cart.svg" alt=""></a></li>
-                    <li><a href="#/login">Registro</a></li>
-                   <li><a href="#/contact">Contacto</a></li>
-                   <li><a class="hide" id="buttonSignOut" href="" onclick="logOut()">Cerrar Sesión</a></li>
+                  <li><a class="title-nav" href="#/about-me">Sobre mí</a></li>
+                  <li><a class="title-nav" href="#/login">Registro</a></li>
+                  <li><a class="title-nav" href="#/contact">Contacto</a></li>
+                  <li><a class="title-nav" href="#/shopping"><img  class="car" src="assets/shopping-cart.svg" alt=""></a></li>
+                  <li><a class="title-nav hide" id="buttonSignOut" href="" onclick="logOut()">Cerrar Sesión</a></li>
                 </ul>
             </div>
         </nav>
-    </header>    
+    </header>
     <main>
         <div class="container">
             <div class="row">
@@ -64,7 +63,7 @@
           </footer>
     <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script> 
     <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
-    <script src="src/js/firebase.js"></script>
+    <script src="./js/firebase.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="src/js/main.js"></script>
     <script src="src/js/library.js"></script>
