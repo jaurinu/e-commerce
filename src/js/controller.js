@@ -76,29 +76,46 @@ library.controller('myController', {
 
 
 
-    const printData = (img, name, price, description, sku) => {
+    const printData = (img, name, price, description) => {
+      let more = 'Ver más'
       let result = `  <div class="row">
-  <div class="col s4 m4 l3 offset-l3">
-    <div class="card">
-      <div class="card-image">
-        <img src="${img}">
-        <span class="card-title black-text" >${name}</span>
+  <div class="col s4 m4 l4 offset-l3">
+  <div class=" card">
+  <div class="card-image waves-effect waves-block waves-light">
+    <img class="activator" src="${img}">
+  </div>
+  <div class="card-content">
+    <span class="card-title teal-text text-lighten-1"><h5>${name} </h5></span>
+      <p class="col l2 offset-l10" ><i class="far fa-heart heart-size"></i></p>
+      <div class="row">
+      <h5 class="blue-grey-text text-lighten-2 col l6"> ${price}</h5>
+      <a class="waves-effect waves-light col l6 offset-l1 "><i class="fas fa-shopping-bag shop-bag "></i></a>
       </div>
-      <div class="card-content">
-         <h4 > ${price}</h4>
-        <p class="black-text">${description}</p>
-      </div>
-      <div class="card-action">
-      <div class="card-action">
-      <a href="#/shopping" id="${sku}" class="sku"><img class="car" src="../src/assets/shopping-cart.svg"></a> 
-      </div>
-      </div>
-    </div>
+      <a  class=" activator blue-grey-text text-lighten-2 transparent col l7 offset-l4">${more}</a>
+     </div>
+  <div class="card-reveal">
+    <span class="card-title grey-text text-darken-4"><h5>${name}</h5><i class="material-icons right">close</i></span>
+    <p class="description-size blue-grey-text text-lighten-2">${description}</p>
+    
+   
+  </div>
+</div>
+
+
+  
   </div>
 </div>
 `;
       printTotalAccesories.insertAdjacentHTML("beforeend", result);
     }
+
+
+
+          
+
+
+
+
 
     totalAccesories.forEach(element => {
       let img = element.img;

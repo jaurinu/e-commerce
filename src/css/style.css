@@ -44,7 +44,7 @@ h5  {
 
  .font-shop{
      font-size: 1.1em;
-   
+
  }
  .textarea-search{
     position: relative;
@@ -56,7 +56,8 @@ h5  {
     box-sizing: border-box;
     background-color:#eeeeee;
     border-radius: 5px;
-    font-size: 14px;
+    font-size: 17px;
+    color: orangered;
     resize: vertical;
     font-family: 'Open Sans', sans-serif !important;
     max-height: 400px;
@@ -75,3 +76,20 @@ h5  {
  .size-view{
     min-height: 100vh !important;
  }
+
+ .shop-bag{
+ 
+     font-size: 30px;
+     color:#ffb74d;
+ }
+
+ .heart-size{
+     font-size: 25px;
+     color:  #424242;
+ }
+
+ .description-size{
+     font-size: 22px;
+ }
+
+ 
