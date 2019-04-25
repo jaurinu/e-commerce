@@ -4,6 +4,9 @@ window.library.getId("view").routing()
     .route('/', 'src/views/home.html', 'myController', function (){
         library.getCtrl().functionsHome()
     })
+    .route('/shop', 'src/views/products.html', 'myController', function(){
+        library.getCtrl().functionsHome()
+    })
     .route('/login', 'src/views/login.html', 'myController', function(){
         library.getCtrl().login()
     })

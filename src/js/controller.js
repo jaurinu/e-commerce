@@ -1,4 +1,5 @@
 library.controller('myController', {
+
   login:()=>{
 
     (function () {
@@ -26,11 +27,13 @@ library.controller('myController', {
   (function(){
 
         const hideSignOut = document.getElementById('buttonSignOut');
+        const buttonLogin = document.getElementById('buttonLogin');
         var uid = null;
         firebase.auth().onAuthStateChanged(function(user) {
             if (user) {
                 console.log(' User is signed in')
                 hideSignOut.classList.remove('hide')
+                buttonLogin.classList.add('hide');
             } else{
                 //redirect to login page
                 uid= null;
@@ -39,15 +42,7 @@ library.controller('myController', {
           });
     
     
-          // function logOut(){
-          //   firebase.auth().signOut();
-          //   window.location = 'index.html#/'
-          //   hideSignOut.classList.add('hide')
-           
-           
-          // }
-          // mainApp.logOut = logOut;
-          //  console.log('deslogueado')
+        
     }) ();
     
   },
