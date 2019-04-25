@@ -20,12 +20,12 @@ nav.nav{
     margin-top: 5px;
  }
  .title-nav{
-    color: #26a69a;
+    color: white;
     font-size: 1.2em;
  }
  .title-nav:hover{
-    color: #90a4ae;
-    background-color: #fff;
+    color: #26a69a;
+    background-color: #ffb74d;
  }
  .brand-logo .img-logo{
     width: 100px;
@@ -38,6 +38,7 @@ h5  {
 .social{
    width: 30px;
 }
+
 
 
  /* styles Andrea */
@@ -57,7 +58,7 @@ h5  {
     background-color:#eeeeee;
     border-radius: 5px;
     font-size: 17px;
-    color: orangered;
+    color: #ffb74d;
     resize: vertical;
     font-family: 'Open Sans', sans-serif !important;
     max-height: 400px;
@@ -94,4 +95,8 @@ h5  {
 
  .tarjetitas{
      display: inline-block;
+ }
+ .footer-margin{
+    border-style: solid;
+    border-top-color:#e0e0e0;
  }
