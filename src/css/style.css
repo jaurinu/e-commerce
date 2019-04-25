@@ -37,30 +37,36 @@ h5  {
  /* styles Andrea */
 
  .font-shop{
-     font-size: 1.1em;
-
+     font-size: 1.3em;
+ }
+ .font-li{
+    font-size: 1.1em;
  }
  .textarea-search{
     position: relative;
-    width: 80%;
-   right:10%;
+    width: 100%;
     padding: 10px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    background-color:#eeeeee;
+    background-color:#fff;
     border-radius: 5px;
     font-size: 17px;
-    color: #ffb74d;
+    color: #90a4ae;
     resize: vertical;
     font-family: 'Open Sans', sans-serif !important;
     max-height: 400px;
     min-height: 45px;
     margin-bottom: 5px;
+    resize: none;
+    outline: none;
+ }
+ .textarea-search:focus{
+    border: 1px solid #ffb74d;
  }
 
  .button-search{
-     width:60%;
+     width:100%;
  }
  .title-search{
      position: relative;
@@ -68,7 +74,7 @@ h5  {
  }
 
  .size-view{
-    min-height: 100vh !important;
+    min-height: 80vh !important;
  }
 
  .shop-bag{
@@ -93,3 +99,7 @@ h5  {
     border-style: solid;
     border-top-color:#e0e0e0;
  }
+ .card.products{
+    height: 600px;
+ }
+
