@@ -1,36 +1,59 @@
-<div id="car">
-    <h2 class="center-align">Carrito</h2>
-    <script src="https://www.paypal.com/sdk/js?client-id=sb"></script>
-    <div id="paypal-button-container">
-
-      <script>
-        paypal.Buttons({
-          createOrder: function (data, actions) {
-            return actions.order.create({
-              purchase_units: [{
-                amount: {
-                  value: '$242.71'
-                }
-              }]
-            });
-          },
-          onApprove: function (data, actions) {
-            return actions.order.capture().then(function (details) {
-              alert('Transaction completed by ' + details.payer.name.given_name);
-              // Call your server to save the transaction
-              return fetch('/paypal-transaction-complete', {
-                method: 'post',
-                headers: {
-                  'content-type': 'application/json'
-                },
-                body: JSON.stringify({
-                  orderID: data.orderID
-                })
-              });
-            });
-          }
-        }).render('#paypal-button-container');
-      </script>
+<div class="row">
+  <form class="col s12">
+    <div class="row">
+      <div class="input-field col s6">
+        <label for="first_name">Nombre</label>
+        <input id="first_name" type="text" class="validate">
+      </div>
+      <div class="input-field col s6">
+        <label for="last_name">Apellido</label>
+        <input id="last_name" type="text" class="validate">
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <label for="disabled">Pais</label>
+          <input id="disabled" type="text" class="validate">
+        </div>
+      </div>
+      <div class="input-field col s12">
+        <label for="disabled">Localidad/Cuidad</label>
+        <input id="disabled" type="text" class="validate">
+      </div>
     </div>
-  </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <label for="Direccion">Dirección</label>
+        <input id="Direccio" type="text" class="validate">
+      </div>
+      <div class="input-field col s12">
+        <label for="Ciudad">Ciudad</label>
+        <input id="Ciudad" type="text" class="validate">
+      </div>
+      <div class="input-field col s12">
+        <label for="CodigoPostal">Codigo Postal</label>
+        <input id="CodigoPostal" type="text" class="validate">
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s6">
+        <i class="material-icons prefix">phone</i>
+        <input id="icon_telephone" type="tel" class="validate">
+        <label for="icon_telephone">Telephone</label>
+      </div>
+      <div class="input-field col s12">
+        <label for="email">Email</label>
+        <input id="email" type="email" class="validate">
+      </div>
+    </div>
+    <!-- <div class="row">
+     <div class="col s12">
+       This is an inline input field:
+       <div class="input-field inline">
+         <input id="email_inline" type="email" class="validate">
+         <label for="email_inline">Email</label>
+         <span class="helper-text" data-error="wrong" data-success="right">Helper text</span>
+       </div>
+     </div>
+   </div> -->
+  </form>
 </div>
