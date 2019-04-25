@@ -9,7 +9,7 @@ function logOut() {
 }
 mainApp.logOut = logOut;
    
-//Función para el sidenav
+//Función para el dropDown
 let dropdownShop =
   (function () {
     document.addEventListener('DOMContentLoaded', function () {
