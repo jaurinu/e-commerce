@@ -78,7 +78,8 @@ library.controller('myController', {
 
     const printData = (img, name, price, description) => {
       let more = 'Ver más'
-      let result = `  <div class="row">
+      let result = `
+      <div class="row">
   <div class="col s4 m4 l4 offset-l3">
   <div class=" card">
   <div class="card-image waves-effect waves-block waves-light">
@@ -95,14 +96,9 @@ library.controller('myController', {
      </div>
   <div class="card-reveal">
     <span class="card-title grey-text text-darken-4"><h5>${name}</h5><i class="material-icons right">close</i></span>
-    <p class="description-size blue-grey-text text-lighten-2">${description}</p>
-    
-   
+    <p class="description-size blue-grey-text text-lighten-2">${description}</p> 
   </div>
 </div>
-
-
-  
   </div>
 </div>
 `;
