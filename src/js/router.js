@@ -1,10 +1,10 @@
 window.library.getId("view").routing()
 
-  .route('/', './views/home.html', 'myController', null, null)
-  .route('/about-me', './views/about-me.html', 'myController', null, null)
-  .route('/shop', './views/products.html', 'myController', function () {
+  .route('/', './views/home.html', 'myController', function () {
     library.getCtrl().functionsHome()
   })
+  .route('/about-me', './views/about-me.html', 'myController', null, null)
+
   .route('/shopping', './views/shopping.html', 'myController', function () {
     library.getCtrl().printCart()
   })

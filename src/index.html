@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
   <meta name="keywords" content="ceramica, artesanal, ceramistas, mezcaleros, arte-Objeto">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="./css/style.css">
+
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
@@ -16,33 +18,23 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>E-commerce</title>
   <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+
 </head>
+
 <body>
-    <header>
-        <nav class="nav white">
-            <div class="nav-wrapper">
-                <div class="row">
-                  <a href="#/" class="brand-logo col l2 m2"><img class="img-logo" src=".\assets\logopatahueca.jpg" alt=""></a>
-                  <ul id="nav-mobile" class="right hide-on-med-and-down">
-                      <li><a class="title-nav" href="#/">Inicio</a></li>
-                    <li><a class="title-nav" href="#/about-me">Sobre nosotros</a></li>
-                    <li><a class="title-nav" href="#/shop">Tienda</a></li>
-                    <li><a class="title-nav" href="#/shopping"><i class="fas fa-shopping-bag"></i></a></li>
-                    <li><a id="buttonLogin" class="title-nav" href="#/login">Registro</a></li>
-                    <!-- <li><a class="title-nav" href="#/contact">Contacto</a></li> -->
-                    <li><a class="title-nav hide" id="buttonSignOut" href="" onclick="logOut()">Cerrar Sesión</a></li>
-                  </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <div class="container">
-            <div class="row">
-                <h1 class="col l12 m12 s12 center-align">Pata hueca</h1>
-            </div>
-            <div id="view">
-            </div>
+  <header>
+    <nav class="nav white">
+      <div class="nav-wrapper">
+        <div class="row">
+          <a href="#/" class="brand-logo col l2 m2"><img class="img-logo" src=".\assets\logopatahueca.jpg" alt=""></a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a class="title-nav" href="#/">Inicio</a></li>
+            <li><a class="title-nav" href="#/about-me">Sobre nosotros</a></li>
+            <li><a class="title-nav" href="#/shopping"><i class="fas fa-shopping-bag"></i></a></li>
+            <li><a id="buttonLogin" class="title-nav" href="#/login">Registro</a></li>
+            <!-- <li><a class="title-nav" href="#/contact">Contacto</a></li> -->
+            <li><a class="title-nav hide" id="buttonSignOut" href="" onclick="logOut()">Cerrar Sesión</a></li>
+          </ul>
         </div>
       </div>
     </nav>
@@ -60,49 +52,7 @@
       </div>
 
       <div id="view" class="size-view">
-
       </div>
-
-
-      <!-- PayPal -->
-      <!-- <script
-        src="https://www.paypal.com/sdk/js?client-id=AYjS1vO1oFNoLSmkLD5Foaeh7adtVvdHZGtH4YDfHYEIM-5GgnfLWZTVQprA8vA3WTriaP9k8ZT9QyAB">
-      </script>
-
-
-      <div id="paypal-button-container">
-
-        <script>
-          paypal.Buttons({
-            createOrder: function (data, actions) {
-              return actions.order.create({
-                purchase_units: [{
-                  amount: {
-                    value: '$242.71'
-                  }
-                }]
-              });
-            },
-            onApprove: function (data, actions) {
-              return actions.order.capture().then(function (details) {
-                alert('Transaction completed by ' + details.payer.name.given_name);
-                // Call your server to save the transaction
-                return fetch('/paypal-transaction-complete', {
-                  method: 'post',
-                  headers: {
-                    'content-type': 'application/json'
-                  },
-                  body: JSON.stringify({
-                    orderID: data.orderID
-                  })
-                });
-              });
-            }
-          }).render('#paypal-button-container');
-        </script>
-      </div>
-    </div> -->
-
 
 
   </main>
@@ -154,4 +104,4 @@
 </body>
 
 
-</html>
+</html
