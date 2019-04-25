@@ -48,7 +48,10 @@ library.controller('myController', {
   },
 
   functionsHome: () => {
-
+    var instance = M.Carousel.init({
+      fullWidth: true,
+      indicators: true
+    });
 
     const printTotalAccesories = document.getElementById('printTotalAccesories');
 
@@ -81,7 +84,7 @@ library.controller('myController', {
       let result = `
      
         <div class="col s3 m3 l3">
-        <div class=" card">
+        <div class="card products">
         <div class="card-image waves-effect waves-block waves-light">
           <img class="activator" src="${img}">
         </div>
