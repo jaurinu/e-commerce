@@ -85,12 +85,18 @@ h5  {
      font-size: 30px;
      color:#ffb74d;
  }
+ .shop-bag:hover{
+    color:#4db6ac;
+ }
 
  .heart-size{
      font-size: 25px;
      color:  #424242;
  }
 
+ .heart-size:hover{
+     color:#ffb74d;
+ }
  .description-size{
      font-size: 22px;
  }
@@ -150,6 +156,7 @@ h5  {
  .taller{
     color: #26a69a;
     font-weight: bold;
+    font-size:1.2rem;
 }
 .textabout{
     
@@ -184,4 +191,11 @@ h5  {
     margin: 5px;
     display: inline-block;
    
+}
+
+.login-position{
+    
+    position: relative;
+    top: 240px;
+
 }

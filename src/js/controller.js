@@ -53,27 +53,25 @@ library.controller('myController', {
       fullWidth: true,
       indicators: true
     });
+
     const printTotalAccesories = document.getElementById('printTotalAccesories');
     const url = 'https://e-commerce-29db7.firebaseio.com/catalogo.json';
     console.log(url)
     fetch(url)
       .then(response => response.json())
-      .then(dataEtsy => {
-        const totalDataEtsy = dataEtsy;
-        console.log(totalDataEtsy)
-        localStorage.setItem('etsyData', JSON.stringify(totalDataEtsy));
+      .then(dataPataHueca => {
+        const totaldataPataHueca = dataPataHueca;
+        console.log(totaldataPataHueca)
+        localStorage.setItem('pataChuecaData', JSON.stringify(totaldataPataHueca));
       })
       .catch(error => (error))
 
-    const newData = JSON.parse(localStorage.getItem('etsyData'));
-    console.log(newData);
-
+    const newData = JSON.parse(localStorage.getItem('pataChuecaData'));
+ 
     const totalAccesories = newData[0].complementos;
     const totalMezcaleros = newData[0].mezcaleros;
     const totalGlasses = newData[0].vasos;
-    console.log(totalAccesories);
-    console.log(totalMezcaleros);
-    console.log(totalGlasses);
+   
 
 
 
@@ -87,11 +85,11 @@ library.controller('myController', {
           <img class="activator" src="${img}">
         </div>
         <div class="card-content">
-          <span class="card-title teal-text text-l.. ighten-1"><h5>${name} </h5></span>
+          <span class="card-title teal-text text-lighten-1"><h5>${name} </h5></span>
             <p class="col l2 offset-l10" ><i class="far fa-heart heart-size"></i></p>
             <div class="row">
             <h5 class="blue-grey-text text-lighten-2 col l6"> ${price}</h5>
-            <a class="waves-effect waves-light col l6 offset-l1 "><i class="fas fa-shopping-bag shop-bag "></i></a>
+            <a class="waves-effect waves-light col l6 offset-l1 "><i class="fas fa-shopping-bag shop-bag"></i></a>
             </div>
             <a  class=" activator blue-grey-text text-lighten-2 transparent col l7 offset-l4">${more}</a>
           </div>
