@@ -24,27 +24,7 @@ library.controller('myController', {
       ui.start('#firebaseui-auth-container', uiConfig);
     })();
 
-    (function() {
-
-      const hideSignOut = document.getElementById('buttonSignOut');
-      const buttonLogin = document.getElementById('buttonLogin');
-      var uid = null;
-      firebase.auth().onAuthStateChanged(function(user) {
-        if (user) {
-          console.log(' User is signed in')
-          hideSignOut.classList.remove('hide')
-          buttonLogin.classList.add('hide');
-        } else {
-          //redirect to login page
-          uid = null;
-          console.log('no estás logueado')
-        }
-      });
-
-
-
-    })();
-
+    
   },
 
   functionsHome: () => {
